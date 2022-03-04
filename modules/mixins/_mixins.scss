@@ -1,0 +1,46 @@
+@mixin obNull {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+
+@mixin standartSection{
+	margin: 0 auto;
+	padding-left: 160px;
+	padding-right: 160px;
+}
+
+@mixin standartSectionCalc {
+	padding-left: calc(60px + 100 * ((100vw - 768px) /672));
+	padding-right: calc(60px + 100 * ((100vw - 768px) / 672));
+  }
+
+  @mixin standartSectionCalcPhone {
+	padding-left: calc(20px + 140 * ((100vw - 320px) /1120));
+	padding-right: calc(20px + 140 * ((100vw - 320px) / 1120));
+  }
+
+  @mixin changeFont {
+	font-size: calc(20px + 8 * ((100vw - 768px) / 562));
+  }
+
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+  }
+
+
+  @mixin tablets {
+    @media screen and (max-width: $tablets) {
+      @content;
+    }
+  }
+
+  @mixin phones-small {
+    @media screen and (max-width: $phones-small) {
+      @content;
+    }
+  }

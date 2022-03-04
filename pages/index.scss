@@ -1,0 +1,691 @@
+
+@import "./../vendor/fonts.scss";
+@import "./../vendor/normalize.css";
+@import "./../modules/variables/media";
+@import "./../modules/variables/variables";
+@import "./../modules/mixins/mixins";
+
+
+.page{
+	@include obNull;
+	color: $anotherColor;
+	background-color: $mainColor;
+	max-width: 1440px;
+  	margin: 0 auto;
+	font-family: "Roboto", Arial, sans-serif;
+	font-weight: 400;
+	font-size: normal;
+}
+
+.header{
+	@include obNull;
+	@include standartSection;
+	padding-top: 65px;
+	margin-bottom: 60px;
+	padding-left: 160px;
+	padding-right: 160px;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		padding-top: 24px;
+		margin-bottom: 60px;
+	}
+}
+
+.logo-status{
+	display: flex;
+	align-items: center;
+}
+
+.logo-status__logo{
+	@include obNull;
+	margin-right: 20px;
+	font-size: 22px;
+	line-height: 30px;
+
+	@include phones-small{
+		margin-right: 16px;
+	}
+}
+
+.logo-status__status{
+	@include obNull;
+	background-color: $aczentColor2;
+	width: 99px;
+	height: 20px;
+	border-radius: 4px;
+	color: $mainColor;
+	font-size: 12px;
+	line-height: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.intro{
+	@include obNull;
+	@include standartSection;
+	margin-bottom: 120px;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include tablets{
+		margin-bottom: 52px;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		margin-bottom: 40px;
+	}
+}
+.intro__title{
+	@include obNull;
+	margin-bottom: 20px;
+	font-size: 112px;
+	line-height: 112px;
+	font-size: 112px;
+	line-height: 112px;
+
+	@include tablets{
+		font-size: 70px;
+		line-height: 90px;
+		margin-bottom: 0px;
+	}
+
+	@include phones-small{
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 10px;
+
+	}
+}
+.intro__subtitle{
+	@include obNull;
+	margin-bottom: 230px;
+	font-size: 80px;
+	line-height: 70px;
+
+	@include tablets{
+		font-size: calc(30px + 20 * ((100vw - 320px) /448));
+		line-height: calc(38px + 22 * ((100vw - 320px) /448));
+		margin-bottom: 470px;
+	}
+	@include phones-small{
+		margin-bottom: 260px;
+	}
+}
+
+.button-input{
+	@include obNull;
+	display: flex;
+}
+
+.button-input__input{
+	@include obNull;
+	border: none;
+	width: 348px;
+	height: 50px;
+	background: rgba(142, 142, 152, 0.2);
+	border-radius: 8px 0px 0px 8px;
+	outline: none;
+	color: $anotherColor;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.375px;
+	padding-left: 16px;
+
+	@include tablets{
+		width: 427px;
+	}
+
+	@include phones-small{
+		width: 229px;
+	}
+}
+
+.button-input__input:hover{
+	background: rgba(142, 142, 152, 0.3);
+}
+.button-input__input:focus{
+	background: rgba(142, 142, 152, 0.3);
+}
+.button-input__button{
+	@include obNull;
+  	border: none;
+  	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 14px;
+  	color: inherit;
+  	background-color: transparent;
+	width: 221px;
+	height: 50px;
+	background: #47474C;
+	border-radius: 0px 8px 8px 0px;
+	cursor: pointer;
+
+	@include phones-small{
+		font-size: 0px;
+		width: 50px;
+	}
+}
+
+.button-input__img{
+	font-size: 14px;
+}
+.input-ref{
+	@include obNull;
+	font-size: 12px;
+	line-height: 18px;
+	color: #47474C;
+	margin-top: 12px;
+
+	@include tablets{
+		margin-top: 10px;
+	}
+}
+.img{
+	@include obNull;
+	margin: 0 auto;
+  	padding-right: 30px;
+	padding-left: 30px;
+	margin-bottom: 120px;
+
+
+	@include tablets{
+		@include standartSectionCalc;
+		margin-bottom: 120px;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		margin-bottom: 60px;
+	}
+}
+.img__cont{
+	display: flex;
+	margin-bottom: 20px;
+
+	@include phones-small{
+		flex-direction: column;
+		align-self: center;
+	}
+}
+.img__cont:last-of-type{
+	margin-bottom: 0px
+}
+.img__item1{
+	@include obNull;
+	width: 448px ;
+	height: 230px;
+	background-image: url("./../images/1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	margin-right: 16px;
+
+	@include tablets{
+		width: 448px;
+	}
+
+	@include phones-small{
+		width: 280px;
+		height: 142px;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+}
+.img__item2{
+	@include obNull;
+	width: 912px;
+	height: 230px;
+	background: #FFD233;
+	border-radius: 10px;
+
+	@include tablets{
+		width: 180px;
+	}
+
+	@include phones-small{
+		width: 280px;
+		height: 67px;
+	}
+}
+.img__item3{
+	@include obNull;
+	width: 630px;
+	height: 552px;
+	background: #25E197;
+	border-radius: 10px;
+	margin-right: 16px;
+
+	@include tablets{
+		width: 173px;
+		height: 344px;
+	}
+
+	@include phones-small{
+		width: 280px;
+		height: 124px;
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+}
+.img__item4{
+	@include obNull;
+	width: 730px;
+	height: 552px;
+	background-image: url("./../images/2.jpg");
+	border-radius: 10px;
+
+	@include tablets{
+		width: 455px;
+		height: 344px;
+	}
+
+	@include phones-small{
+		width: 280px;
+		height: 211px;
+	}
+}
+.about{
+	@include obNull;
+	@include standartSection;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone
+	}
+}
+.about__text{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	color:$textMainColor;
+	margin-bottom: 60px;
+
+	@include tablets{
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+}
+.about__slogan{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	margin-bottom: 120px;
+	font-weight: 400;
+
+	@include tablets{
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 70px;
+	}
+
+}
+.costs{
+	@include obNull;
+	@include standartSection;
+	display: flex;
+	margin-bottom: 120px;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include tablets{
+		flex-direction: column;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		margin-bottom: 70px;
+	}
+}
+
+.costs__item{
+	@include obNull;
+	width: 550px;
+	height: 364px;
+	background: #1C1C1E;
+	border-radius: 16px;
+	padding: 40px;
+	margin-right: 20px;
+	cursor: pointer;
+
+	@include tablets{
+		width: calc(280px + 989 * ((100vw - 320px) /1120));
+		margin-bottom: 20px;
+		margin-right: 0px;
+	}
+
+	@include phones-small{
+		padding:20px;
+		height: 282px;
+	}
+}
+
+.costs__item:hover{
+	background: #232327;
+}
+.costs__item:last-of-type{
+	margin-right: 0;
+
+	@include tablets{
+		margin-bottom: 0px;
+	}
+
+}
+.costs__subtitle{
+	@include obNull;
+	color: $textMainColor;
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 20px;
+
+	@include phones-small{
+		margin-bottom: 10px;
+	}
+}
+.costs__title{
+	@include obNull;
+	font-size: 32px;
+	line-height: 32px;
+	margin-bottom: 40px;
+
+	@include phones-small{
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 28px;
+	}
+}
+.costs__text{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	color: $textMainColor;
+	margin-bottom: 40px;
+
+	@include desktop{
+		font-size: calc(20px + 12 * ((100vw - 768px) /672));
+		line-height: calc(30px + 10 * ((100vw - 768px) /672));
+	}
+
+	@include tablets{
+		font-size: calc(20px + 30 * ((100vw - 320px) /1120));
+		line-height: calc(30px + 10 * ((100vw - 320px) /448));
+	}
+
+	@include phones-small{
+		font-size: 11px;
+		line-height: 18px;
+		margin-bottom: 100px;
+	}
+}
+.costs__cost{
+	@include obNull;
+	font-size: 14px;
+	line-height: 14px;
+	color:$aczentColor2;
+}
+
+.garantie{
+	@include obNull;
+	@include standartSection;
+	margin-bottom: 100px;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		margin-bottom: 70px;
+	}
+}
+.garantie__title{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	margin-bottom: 60px;
+	font-weight: 400;
+
+	@include tablets{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 40px;
+	}
+}
+.garantie__items{
+	@include obNull;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+.garantie__item{
+	@include obNull;
+	background: #1C1C1E;
+	width: 265px;
+	height: 153px;
+	border-radius: 10px;
+	padding: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+
+	@include tablets{
+		width: 314px;
+		margin-right: 19px;
+	}
+
+	@include phones-small{
+		width: 280px;
+		height: 148px;
+		margin-right: 0px;
+	}
+}
+
+.garantie__item:hover{
+	background: #232327;
+
+}
+.garantie__item:nth-child(2n){
+	@include tablets{
+		margin-right: 0;
+	}
+
+}
+.garantie__item:last-of-type{
+	margin-bottom: 0;
+	margin-right: 0;
+}
+.garantie__subtitle{
+	@include obNull;
+	font-size: 18px;
+	line-height: 18px;
+	color: #EAEAF0;
+	margin-bottom: 38px;
+
+}
+.garantie__text{
+	@include obNull;
+	font-size: 15px;
+	line-height: 19px;
+	color: $textMainColor;
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+.support{
+	@include obNull;
+	@include standartSection;
+	margin-bottom: 240px;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include tablets{
+		margin-bottom: 210px;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone;
+		margin-bottom: 180px;
+	}
+}
+.support__title{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	margin-bottom: 90px;
+	font-weight: 400;
+
+	@include tablets{
+		font-size: 20px;
+		line-height: 30px;
+		margin-bottom: 80px;
+	}
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 50px;
+	}
+}
+.support__button{
+	@include obNull;
+	width: 306px;
+	height: 50px;
+	background: #47474C;
+	border-radius: 8px;
+ 	border: none;
+  	font-family: "Roboto";
+	font-weight: 400;
+	font-size: 14px;
+  	color: inherit;
+	cursor: pointer;
+	margin-bottom: 50px;
+	letter-spacing: 0.375px;
+	line-height: 24px;
+
+	@include tablets{
+		margin-bottom: 40px;
+		width: calc(280px + 26 * ((100vw - 320px) /448));
+	}
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 30px;
+	}
+}
+.support__text{
+	@include obNull;
+	font-size: 32px;
+	line-height: 40px;
+	color:$textMainColor;
+
+	@include tablets{
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	@include phones-small{
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+.footer{
+	@include obNull;
+	@include standartSection;
+
+	@include desktop{
+		@include standartSectionCalc;
+	}
+
+	@include phones-small{
+		@include standartSectionCalcPhone
+	}
+}
+.footer__line{
+	@include obNull;
+	width: 100%;
+	border: 2px solid #151515;
+	margin-bottom: 60px;
+
+	@include tablets{
+		margin-bottom: 60px;
+	}
+
+	@include phones-small{
+		margin-bottom: 30px;
+	}
+}
+.button-input_footer{
+	@include obNull;
+	margin-top: 84px;
+	margin-bottom: 18px;
+
+	@include tablets{
+		width: calc(280px + 289 * ((100vw - 320px) /448));
+	}
+
+	@include phones-small{
+		margin-top: 184px;
+		margin-bottom: 10px;
+	}
+}
+
+.footer__copywight{
+	@include obNull;
+	font-size: 12px;
+	line-height: 18px;
+	color: #47474C;
+}
+.input-ref-footer{
+	@include tablets{
+		margin-bottom: 60px;
+	}
+	@include phones-small{
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+
+}
+.footer__cont{
+	@include obNull;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 60px;
+
+	@include tablets{
+		flex-direction: column;
+	}
+
+}
