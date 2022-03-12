@@ -175,7 +175,6 @@
 		font-size: calc(12px + 2 * ((100vw - 320px) /1120));
 		line-height: calc(18px + 8 * ((100vw - 320px) /1120));
 	}
-
 	@include phones-small{
 		font-size: 0px;
 		width: 50px;
@@ -361,7 +360,6 @@
 	display: flex;
 	margin-bottom: 120px;
 
-
 	@include desktop{
 		@include standartSectionCalc;
 	}
@@ -498,8 +496,6 @@
 	display: grid;
 	gap: 20px;
 	grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-
-
 }
 .garantie__item{
 	@include obNull;

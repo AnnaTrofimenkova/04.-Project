@@ -210,6 +210,7 @@
   font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
+
   line-height: 24px;
   color: inherit;
   background-color: transparent;
@@ -219,6 +220,7 @@
   border-radius: 0px 8px 8px 0px;
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
   .button-input__button {
     font-size: calc(12px + 2 * (100vw - 320px) / 1120);
@@ -321,7 +323,6 @@
   height: 100%;
   border-radius: 10px;
 }
-
 .img__item2 {
   margin: 0;
   padding: 0;
