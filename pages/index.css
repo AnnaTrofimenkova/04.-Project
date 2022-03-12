@@ -117,6 +117,7 @@
   padding: 0;
   box-sizing: border-box;
   margin-bottom: 20px;
+  font-weight: 400;
   font-size: 112px;
   line-height: 112px;
   font-size: 112px;
@@ -144,6 +145,7 @@
   margin-bottom: 230px;
   font-size: 80px;
   line-height: 70px;
+  font-weight: 400;
 }
 @media screen and (max-width: 768px) {
   .intro__subtitle {
@@ -208,6 +210,8 @@
   font-family: "Roboto";
   font-weight: 400;
   font-size: 14px;
+
+  line-height: 24px;
   color: inherit;
   background-color: transparent;
   width: 221px;
@@ -215,6 +219,13 @@
   background: #47474C;
   border-radius: 0px 8px 8px 0px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .button-input__button {
+    font-size: calc(12px + 2 * (100vw - 320px) / 1120);
+    line-height: calc(18px + 8 * (100vw - 320px) / 1120);
+  }
 }
 @media screen and (max-width: 320px) {
   .button-input__button {
@@ -224,7 +235,9 @@
 }
 
 .button-input__img {
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
 }
 
 .input-ref {
@@ -287,12 +300,9 @@
   box-sizing: border-box;
   width: 448px;
   height: 230px;
-  background-image: url("./../images/1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   border-radius: 10px;
   margin-right: 16px;
+  background-color: #000;
 }
 @media screen and (max-width: 768px) {
   .img__item1 {
@@ -308,6 +318,11 @@
   }
 }
 
+.img__item-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 .img__item2 {
   margin: 0;
   padding: 0;
@@ -360,7 +375,6 @@
   box-sizing: border-box;
   width: 730px;
   height: 552px;
-  background-image: url("./../images/2.jpg");
   border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -630,8 +644,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
 }
 
 .garantie__item {
@@ -639,41 +654,22 @@
   padding: 0;
   box-sizing: border-box;
   background: #1C1C1E;
-  width: 265px;
+  width: 100%;
   height: 153px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   padding: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  .garantie__item {
-    width: 314px;
-    margin-right: 19px;
-  }
 }
 @media screen and (max-width: 320px) {
   .garantie__item {
-    width: 280px;
     height: 148px;
-    margin-right: 0px;
   }
 }
 
 .garantie__item:hover {
   background: #232327;
-}
-
-@media screen and (max-width: 768px) {
-  .garantie__item:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-
-.garantie__item:last-of-type {
-  margin-bottom: 0;
-  margin-right: 0;
 }
 
 .garantie__subtitle {
@@ -683,7 +679,7 @@
   font-size: 18px;
   line-height: 18px;
   color: #EAEAF0;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 }
 
 .garantie__text {

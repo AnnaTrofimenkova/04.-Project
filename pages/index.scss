@@ -86,6 +86,7 @@
 .intro__title{
 	@include obNull;
 	margin-bottom: 20px;
+	font-weight: 400;
 	font-size: 112px;
 	line-height: 112px;
 	font-size: 112px;
@@ -109,6 +110,7 @@
 	margin-bottom: 230px;
 	font-size: 80px;
 	line-height: 70px;
+	font-weight: 400;
 
 	@include tablets{
 		font-size: calc(30px + 20 * ((100vw - 320px) /448));
@@ -160,6 +162,7 @@
   	font-family: "Roboto";
 	font-weight: 400;
 	font-size: 14px;
+	line-height: 24px;
   	color: inherit;
   	background-color: transparent;
 	width: 221px;
@@ -168,6 +171,10 @@
 	border-radius: 0px 8px 8px 0px;
 	cursor: pointer;
 
+	@include tablets{
+		font-size: calc(12px + 2 * ((100vw - 320px) /1120));
+		line-height: calc(18px + 8 * ((100vw - 320px) /1120));
+	}
 	@include phones-small{
 		font-size: 0px;
 		width: 50px;
@@ -175,7 +182,9 @@
 }
 
 .button-input__img{
-	font-size: 14px;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 20px;
 }
 .input-ref{
 	@include obNull;
@@ -222,12 +231,9 @@
 	@include obNull;
 	width: 448px ;
 	height: 230px;
-	background-image: url("./../images/1.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 	border-radius: 10px;
 	margin-right: 16px;
+	background-color:#000 ;
 
 	@include tablets{
 		width: 448px;
@@ -239,6 +245,13 @@
 		margin-bottom: 20px;
 		margin-right: 0;
 	}
+}
+
+.img__item-img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+
 }
 .img__item2{
 	@include obNull;
@@ -280,7 +293,6 @@
 	@include obNull;
 	width: 730px;
 	height: 552px;
-	background-image: url("./../images/2.jpg");
 	border-radius: 10px;
 
 	@include tablets{
@@ -481,54 +493,35 @@
 }
 .garantie__items{
 	@include obNull;
-	display: flex;
-	flex-wrap: wrap;
-
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
 }
 .garantie__item{
 	@include obNull;
 	background: #1C1C1E;
-	width: 265px;
+	width: 100%;
 	height: 153px;
+	object-fit: cover;
 	border-radius: 10px;
 	padding: 20px;
-	margin-right: 20px;
-	margin-bottom: 20px;
 	cursor: pointer;
 
-	@include tablets{
-		width: 314px;
-		margin-right: 19px;
-	}
-
 	@include phones-small{
-		width: 280px;
 		height: 148px;
-		margin-right: 0px;
 	}
 }
 
 .garantie__item:hover{
 	background: #232327;
+}
 
-}
-.garantie__item:nth-child(2n){
-	@include tablets{
-		margin-right: 0;
-	}
-
-}
-.garantie__item:last-of-type{
-	margin-bottom: 0;
-	margin-right: 0;
-}
 .garantie__subtitle{
 	@include obNull;
 	font-size: 18px;
 	line-height: 18px;
 	color: #EAEAF0;
-	margin-bottom: 38px;
-
+	margin-bottom: 36px;
 }
 .garantie__text{
 	@include obNull;
